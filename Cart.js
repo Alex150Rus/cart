@@ -100,8 +100,8 @@ class Cart {
     let find = this.basketItems.find(product => product.id_product === $productId);
     if (find) {
       this.countGoods -= find.quantity;
-      this.amount -= find.price*find.quantity;
-      this.basketItems = this.basketItems.filter(function(item) {
+      this.amount -= find.price * find.quantity;
+      this.basketItems = this.basketItems.filter(function (item) {
         return item !== find
       })
 
@@ -110,4 +110,5 @@ class Cart {
     element.parent().remove();
     console.log(this.basketItems);
   }
+
 }
